@@ -4,10 +4,12 @@ from flask import Flask
 from pandas import DataFrame, to_numeric
 from sodapy import Socrata
 
-client = Socrata("www.datos.gov.co", None)
+from os import getenv
+
+client = Socrata(getenv("SOURCE_HOST"), None)
 
 def get_data():
-    results = client.get("sdvb-4x4j")
+    results = client.get(getenv("SOURCE_FILE"))
     data_frame = DataFrame.from_records(results)
     data_frame['num_resolucion'] = to_numeric(data_frame['num_resolucion'])
     data_frame['cod_territorio'] = to_numeric(data_frame['cod_territorio'])
