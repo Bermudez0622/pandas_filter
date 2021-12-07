@@ -1,3 +1,5 @@
+from flask import render_template
+
 from . import blueprint
 
 from src.util.client import get_data
@@ -9,4 +11,4 @@ def territory(code: int):
 
 @blueprint.route('/form')
 def form():
-    return {"Form": "Resolution"}
+    return render_template('tables.html', title='Territorios')

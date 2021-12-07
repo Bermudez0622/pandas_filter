@@ -1,6 +1,11 @@
 from flask import Blueprint
 
-blueprint = Blueprint('routes', __name__)
+blueprint = Blueprint(
+    'routes',
+    __name__,
+    template_folder='templates',
+    static_folder='static'
+)
 
 from .main import blueprint as main
 blueprint.register_blueprint(main)

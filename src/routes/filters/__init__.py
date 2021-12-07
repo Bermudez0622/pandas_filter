@@ -1,6 +1,10 @@
 from flask import Blueprint
 
-blueprint = Blueprint('filters', __name__, url_prefix='/filters')
+blueprint = Blueprint(
+    'filters',
+    __name__,
+    url_prefix='/filters',
+)
 
 from .amounts import blueprint as amounts
 blueprint.register_blueprint(amounts)

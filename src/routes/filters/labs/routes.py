@@ -1,3 +1,5 @@
+from flask.templating import render_template
+
 from . import blueprint
 
 from src.util.client import get_data
@@ -9,4 +11,4 @@ def lab(name: str):
 
 @blueprint.route('/form')
 def form():
-    return {"Form": "Lab"}
+    return render_template('table.html', title='Laboratorios')
