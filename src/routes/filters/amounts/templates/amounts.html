@@ -1,0 +1,16 @@
+{% extends "forms.html" %}
+    {% block form %}
+        <form method="post">
+            <select name="operation">
+                <option value="">Select Operation</option>
+                <option value="<"><</option>
+                <option value="<="><=</option>
+                <option value=">">></option>
+                <option value=">=">>=</option>
+                <option value="==">==</option>
+                <option value="!=">!=</option>
+            </select>
+            <input name="value" type="number" min="0">
+            <input type="submit" value="Buscar">
+        </form>
+    {% endblock %}

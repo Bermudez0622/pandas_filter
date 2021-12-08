@@ -4,6 +4,8 @@ blueprint = Blueprint(
     'filters',
     __name__,
     url_prefix='/filters',
+    static_folder='static',
+    template_folder='templates'
 )
 
 from .amounts import blueprint as amounts

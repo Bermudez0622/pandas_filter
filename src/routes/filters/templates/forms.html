@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+    {% block headers %}
+        <link rel="stylesheet" href="{{ url_for('routes.filters.static', filename='css/form.css') }}">
+    {% endblock %}
+    {% block content %}
+        <div>
+            <h1>Formulario de {{ title }}</h1>
+            {% block form %}{% endblock %}
+        </div>
+    {% endblock %}
