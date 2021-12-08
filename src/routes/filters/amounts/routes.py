@@ -18,6 +18,7 @@ def form():
         value = request.form['value']
         return redirect(f'/filters/amounts/{operation} {value}')
     elif request.method == 'GET':
-        return render_template('amounts.html', title='Cantidad de vacunas')
+        options = ["<", "<=", ">", ">=", "==", "!="]
+        return render_template('amounts.html', title='Cantidad de vacunas', options=options)
     else:
         return 'Method not allowed'

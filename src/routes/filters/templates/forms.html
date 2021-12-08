@@ -5,6 +5,9 @@
     {% block content %}
         <div>
             <h1>Formulario de {{ title }}</h1>
-            {% block form %}{% endblock %}
+            <form method="post">
+                {% block form %}{% endblock %}
+                <input type="submit" value="Buscar">
+            </form>
         </div>
     {% endblock %}

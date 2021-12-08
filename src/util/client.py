@@ -13,4 +13,4 @@ def get_data():
     data_frame['cod_territorio'] = to_numeric(data_frame['cod_territorio'])
     data_frame['cantidad'] = to_numeric(data_frame['cantidad'])
     data_frame['fecha_corte'] = to_datetime(data_frame['fecha_corte'], infer_datetime_format=True)
-    return data_frame
+    return data_frame.dropna()
