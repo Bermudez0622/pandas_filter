@@ -1,0 +1,11 @@
+{%extends "base.html"%} 
+{%block content%} 
+<h1>Menu de Consultas
+    <br>
+</h1>
+<a href="{{url_for('routes.filters.amounts.form')}}">Consultar tabla por la cantidad de vacunas</a>
+<a href="{{url_for('routes.filters.labs.form')}}">Consultar tabla por el laboratorio de las vacunas</a>
+<a href="{{url_for('routes.filters.resolutions.form')}}">Consultar tabla por resolución de las vacunas</a>
+<a href="{{url_for('routes.filters.states.form')}}">Consultar tabla por el departamento de aplicación de vacunas</a>
+
+{%endblock%}

@@ -19,3 +19,5 @@ blueprint.register_blueprint(resolutions)
 
 from .states import blueprint as states
 blueprint.register_blueprint(states)
+
+from . import routes
